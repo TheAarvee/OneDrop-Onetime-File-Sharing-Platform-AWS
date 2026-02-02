@@ -6,15 +6,7 @@
   One-time Secure File Sharing Platform
 </p>
 
-<!-- <p align="center">
-  <a href="#features">Features</a> •
-  <a href="#demo">Demo</a> •
-  <a href="#tech-stack">Tech Stack</a> •
-  <a href="#getting-started">Getting Started</a> •
-  <a href="#environment-variables">Environment Variables</a> •
-  <a href="#api-reference">API Reference</a> •
-  <a href="#deployment">Deployment</a>
-</p> -->
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/Next.js-16.1.4-black?style=flat-square&logo=next.js" alt="Next.js" />
@@ -24,6 +16,8 @@
   <img src="https://img.shields.io/badge/Firebase-Auth-FFCA28?style=flat-square&logo=firebase" alt="Firebase" />
   <img src="https://img.shields.io/badge/AWS-S3%20%2B%20DynamoDB-FF9900?style=flat-square&logo=amazon-aws" alt="AWS" />
 </p>
+
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/47dc2040-9ea2-4157-bf29-e948735a4a9d" />
 
 
 ## Overview
