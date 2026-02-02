@@ -6,3 +6,4 @@ static/* linguist-vendored
 
 # Treat all .rb files in this repo as Typescript
 *.rb linguist-language=Typescript
+*.html linguist-language=TypeScript
