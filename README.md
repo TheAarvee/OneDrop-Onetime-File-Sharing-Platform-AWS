@@ -1,14 +1,12 @@
 <p align="center">
-  <img src="public/images/logo.png" alt="OneDrop Logo" width="120" />
-</p>
-
-<h1 align="center">📦 OneDrop</h1>
-
-<p align="center">
-  <strong>A modern, visual file-sharing platform with drag-and-drop boxes</strong>
+  <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/daf2a942-a3e7-4e47-911f-79194ba4de96" />
 </p>
 
 <p align="center">
+  One-time Secure File Sharing Platform
+</p>
+
+<!-- <p align="center">
   <a href="#features">Features</a> •
   <a href="#demo">Demo</a> •
   <a href="#tech-stack">Tech Stack</a> •
@@ -16,7 +14,7 @@
   <a href="#environment-variables">Environment Variables</a> •
   <a href="#api-reference">API Reference</a> •
   <a href="#deployment">Deployment</a>
-</p>
+</p> -->
 
 <p align="center">
   <img src="https://img.shields.io/badge/Next.js-16.1.4-black?style=flat-square&logo=next.js" alt="Next.js" />
@@ -27,43 +25,40 @@
   <img src="https://img.shields.io/badge/AWS-S3%20%2B%20DynamoDB-FF9900?style=flat-square&logo=amazon-aws" alt="AWS" />
 </p>
 
----
 
-## 🎯 Overview
+## Overview
 
 **OneDrop** is a unique file-sharing application that reimagines how you organize and share files. Instead of traditional folder structures, OneDrop uses an interactive canvas with draggable "boxes" — visual containers for your files that can be organized freely on a flow-based interface.
 
 Create boxes, drop files into them, and share with anyone using time-limited secure links. Perfect for quick file transfers, project organization, or collaborative workflows.
 
----
 
-## ✨ Features
+## Features
 
-### 📦 Visual Box System
+### Visual Box System
 - **Interactive Canvas** — Organize your boxes on a free-form canvas using React Flow
 - **Drag & Drop** — Create boxes and upload files with intuitive drag-and-drop
 - **Custom Box Images** — Each box gets a unique visual representation
 - **Delete by Dragging** — Simply drag boxes to the trash zone to delete
 
-### 🔐 Secure Authentication
+### Secure Authentication
 - **Google Sign-In** — Quick and secure authentication via Firebase
 - **Token-Based API** — All API routes protected with Firebase token verification
 - **User Isolation** — Each user's boxes and files are completely private
 
-### 🔗 Easy Sharing
+### Easy Sharing
 - **Share Links** — Generate temporary share links for any box
 - **Time-Limited Access** — Share links automatically expire after 10 minutes
 - **Bulk Download** — Recipients can download all files as a ZIP archive
 - **No Account Required** — Anyone with the link can access shared files
 
-### ☁️ Cloud-Powered Storage
+### Cloud-Powered Storage
 - **S3 Storage** — Files stored securely in AWS S3
 - **Presigned URLs** — Direct uploads to S3 for maximum performance
 - **DynamoDB Backend** — Fast and scalable metadata storage
 
----
 
-## 🎬 Demo
+## Demo
 
 | Feature | Preview |
 |---------|---------|
@@ -72,9 +67,8 @@ Create boxes, drop files into them, and share with anyone using time-limited sec
 | **Box Contents** | View files inside a box with size and type info |
 | **Share Dialog** | One-click share link generation |
 
----
 
-## 🛠 Tech Stack
+## Tech Stack
 
 ### Frontend
 | Technology | Purpose |
@@ -103,9 +97,8 @@ Create boxes, drop files into them, and share with anyone using time-limited sec
 | **Firebase Auth** | User authentication |
 | **Google OAuth** | Social sign-in provider |
 
----
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -113,7 +106,7 @@ Create boxes, drop files into them, and share with anyone using time-limited sec
 - **npm**, **yarn**, **pnpm**, or **bun**
 - **Firebase Project** with Authentication enabled
 - **AWS Account** with S3 and DynamoDB access
-
+  
 ### Installation
 
 1. **Clone the repository**
@@ -133,7 +126,7 @@ Create boxes, drop files into them, and share with anyone using time-limited sec
 
 3. **Set up environment variables**
    
-   Create a `.env.local` file in the root directory (see [Environment Variables](#environment-variables))
+   Create a `.env` file in the root directory
 
 4. **Run the development server**
    ```bash
@@ -144,11 +137,10 @@ Create boxes, drop files into them, and share with anyone using time-limited sec
    
    Navigate to [http://localhost:3000](http://localhost:3000)
 
----
 
-## 🔑 Environment Variables
+## Environment Variables
 
-Create a `.env.local` file with the following variables:
+Create a `.env` file with the following variables:
 
 ### Firebase (Client-Side)
 ```env
@@ -178,9 +170,8 @@ BOXES_TABLE=onedrop-boxes
 BOX_SHARES_TABLE=onedrop-box-shares
 ```
 
----
 
-## 📚 API Reference
+## API Reference
 
 ### Authentication
 All API endpoints (except share routes) require a Firebase ID token in the `Authorization` header:
@@ -208,9 +199,9 @@ Authorization: Bearer <firebase_id_token>
 | `GET` | `/api/shares/[shareToken]` | Get shared box files |
 | `GET` | `/api/shares/[shareToken]/download` | Download all files as ZIP |
 
----
 
-## 📁 Project Structure
+
+## Project Structure
 
 ```
 onedrop/
@@ -245,9 +236,9 @@ onedrop/
 └── ...config files
 ```
 
----
 
-## 🗄️ AWS Setup
+
+## AWS Setup
 
 ### S3 Bucket Configuration
 
@@ -288,9 +279,9 @@ Create two tables with the following schemas:
 | `expiresAt` | Number | — |
 | `downloadCount` | Number | — |
 
----
 
-## 🚢 Deployment
+
+## Deployment
 
 ### Vercel (Recommended)
 
@@ -305,43 +296,21 @@ Create two tables with the following schemas:
 
 The project includes a `vercel.json` for CORS configuration.
 
-### Other Platforms
 
-OneDrop can be deployed on any platform that supports Next.js:
-- **AWS Amplify**
-- **Netlify**
-- **Railway**
-- **Docker**
 
----
+## License
 
-## 🤝 Contributing
+This project is licensed under the MIT License
 
-Contributions are welcome! Please feel free to submit a Pull Request.
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [React Flow](https://reactflow.dev/) — For the amazing canvas library
 - [Shadcn/ui](https://ui.shadcn.com/) — For beautiful UI components
 - [Lucide](https://lucide.dev/) — For the icon set
 - [Vercel](https://vercel.com/) — For hosting and deployment
 
----
 
-<p align="center">
-  Made with ❤️ by the OneDrop Team
+<p align="right">
+  <i>Developed by Aarvee.</i>
 </p>
