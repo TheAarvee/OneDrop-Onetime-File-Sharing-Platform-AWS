@@ -1,0 +1,8 @@
+# Ignore all files in the 'static' folder
+static/* linguist-vendored
+
+# Ignore all files with a .css extension
+*.css linguist-vendored=true
+
+# Treat all .rb files in this repo as Typescript
+*.rb linguist-language=Typescript
